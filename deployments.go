@@ -67,10 +67,10 @@ type Deployment struct {
 // https://docs.gitlab.com/ce/api/deployments.html#list-project-deployments
 type ListProjectDeploymentsOptions struct {
 	ListOptions
-	OrderBy *string `url:"order_by,omitempty" json:"order_by,omitempty"`
-	Sort    *string `url:"sort,omitempty" json:"sort,omitempty"`
+	OrderBy       *string `url:"order_by,omitempty" json:"order_by,omitempty"`
+	Sort          *string `url:"sort,omitempty" json:"sort,omitempty"`
+	UpdatedAfter  *string `url:"updated_after,omitempty" json:"updated_after,omitempty"`
 	UpdatedBefore *string `url:"updated_before,omitempty" json:"updated_before,omitempty"`
-	UpdatedAfter *string `url:"updated_after,omitempty" json:"updated_after,omitempty"`
 }
 
 // ListProjectDeployments gets a list of deployments in a project.
